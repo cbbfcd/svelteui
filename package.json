@@ -1,0 +1,83 @@
+{
+  "name": "svelteui",
+  "version": "0.0.0",
+  "description": "A svelte ui library with element-plus style.",
+  "main": "dist/svelteui.js",
+  "module": "dist/svelteui.es.js",
+  "jsnext:main": "dist/svelteui.es.js",
+  "svelte": "src/index.js",
+  "types": "src/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "dev": "cd play && vite",
+    "dist": "rollup -c",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "format": "prettier --write --plugin-search-dir=. ./src",
+    "lint": "tsc --noEmit && eslint ./src --ext .js --ext .svelte",
+    "prepublish": "npm run dist && git add -A dist",
+    "postpublish": "git push && git push --tags",
+    "test": "jest --maxWorkers=2 --verbose",
+    "test:watch": "jest --maxWorkers=2 --verbose --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cbbfcd/svelteui.git"
+  },
+  "keywords": [
+    "svelte",
+    "svelte-ui"
+  ],
+  "author": "huangteng02",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cbbfcd/svelteui/issues"
+  },
+  "homepage": "https://github.com/cbbfcd/svelteui#readme",
+  "peerDependencies": {
+    "svelte": "^3.43.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/preset-typescript": "^7.15.0",
+    "@rollup/plugin-commonjs": "^21.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.5",
+    "@rollup/plugin-typescript": "^8.2.5",
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.27",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/svelte": "^3.0.3",
+    "@tsconfig/svelte": "^2.0.1",
+    "autoprefixer": "^10.3.7",
+    "babel-jest": "^27.2.5",
+    "babel-loader": "^8.2.2",
+    "element-theme-chalk": "^2.15.6",
+    "eslint": "^8.0.0",
+    "eslint-plugin-jest": "^25.0.5",
+    "eslint-plugin-svelte3": "^3.2.1",
+    "jest": "^27.2.5",
+    "jest-transform-svelte": "^2.1.1",
+    "prettier": "^2.4.1",
+    "prettier-plugin-svelte": "^2.4.0",
+    "rollup": "^2.58.0",
+    "rollup-plugin-alias": "^2.2.0",
+    "rollup-plugin-analyzer": "^4.0.0",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-bundle-size": "^1.0.3",
+    "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-livereload": "^2.0.5",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-svelte": "^7.1.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "svelte": "^3.43.2",
+    "svelte-check": "^2.2.7",
+    "svelte-jester": "^2.1.5",
+    "svelte-preprocess": "^4.9.8",
+    "svelte-spa-router": "^3.2.0",
+    "typescript": "^4.4.4",
+    "vite": "^2.6.7"
+  }
+}
