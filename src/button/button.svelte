@@ -1,5 +1,10 @@
 <script>
+  import { getContext, onMount } from 'svelte';
+
   import { clsx } from '../utils/clsx';
+  import { SVELTEUI_BTN_GROUP_KEY } from '../utils/constants';
+
+  const elBtnGroup = getContext(SVELTEUI_BTN_GROUP_KEY);
 
   export let loading = false;
   export let icon = '';
@@ -8,8 +13,8 @@
   export let round = false;
   export let circle = false;
   export let style = void 0;
-  export let type = 'default';
-  export let size = void 0;
+  export let type = $elBtnGroup ? $elBtnGroup.type : 'default';
+  export let size = $elBtnGroup ? $elBtnGroup.size : void 0;
   export let nativeType = 'button';
 
   let clazz = '';
