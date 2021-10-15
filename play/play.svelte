@@ -4,7 +4,6 @@
 
   let components = [
     { label: 'Button', src: './components/button.svelte', path: '/button' },
-    { label: 'ButtonGroup', src: './components/button-group.svelte', path: '/button-group' },
     { src: './components/home.svelte', path: '/' }
   ];
 

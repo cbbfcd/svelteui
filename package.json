@@ -1,7 +1,7 @@
 {
   "name": "svelteui",
   "version": "0.0.0",
-  "description": "A svelte ui library with element-plus style.",
+  "description": "A svelte ui library with element-plus.",
   "main": "dist/svelteui.js",
   "module": "dist/svelteui.es.js",
   "jsnext:main": "dist/svelteui.es.js",
@@ -28,9 +28,13 @@
   },
   "keywords": [
     "svelte",
-    "svelte-ui"
+    "svelte-ui",
+    "element",
+    "element-plus",
+    "ui",
+    "component"
   ],
-  "author": "huangteng02",
+  "author": "cbbfcd",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/cbbfcd/svelteui/issues"
@@ -79,5 +83,10 @@
     "svelte-spa-router": "^3.2.0",
     "typescript": "^4.4.4",
     "vite": "^2.6.7"
+  },
+  "dependencies": {
+    "async-validator": "^4.0.3",
+    "dayjs": "^1.10.7",
+    "lodash-es": "^4.17.21"
   }
 }

@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 import { render, cleanup, fireEvent } from '@testing-library/svelte';
-import Button from '../button.svelte';
+import Button from '..';
 
 beforeEach(cleanup);
 
@@ -116,5 +116,11 @@ describe('Button', () => {
     expect(click).toHaveBeenCalledTimes(1);
     await fireEvent.click(btn);
     expect(click).toHaveBeenCalledTimes(2);
+  });
+
+  test('test button group', () => {
+    const { container } = render(Button.Group);
+
+    expect(container.getElementsByClassName('el-button-group').length).toBe(1);
   });
 });

@@ -17,7 +17,6 @@
   let element = null;
   export { clazz as class };
 
-  // bind to the component instance.
   export function getElement() {
     return element;
   }
@@ -27,6 +26,7 @@
   bind:this={element}
   {style}
   class={clsx({ 'el-button-group': true, [clazz]: !!clazz })}
+  {...$$props}
 >
   <slot />
 </div>

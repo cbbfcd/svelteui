@@ -2,13 +2,21 @@
   import { Button } from '../../src';
 
   const handleClick = () => alert('hello svelteui button!');
+
+  let ref = null;
+
+  $: {
+    if (ref) {
+      console.log('how can i get ref out of the component: ', ref.getElement());
+    }
+  }
 </script>
 
 <div class="show">
   <section>
     <h2>Basic useage</h2>
     <div class="panel">
-      <Button on:click={handleClick}>Default</Button>
+      <Button on:click={handleClick} bind:this={ref}>Default</Button>
       <Button type="primary">Primary</Button>
       <Button type="success">Success</Button>
       <Button type="info">Info</Button>
@@ -90,6 +98,23 @@
     <h2>Loading Button</h2>
     <div class="panel">
       <Button type="primary" loading={true}>Loading</Button>
+    </div>
+  </section>
+
+  <section>
+    <h2>Button Group</h2>
+    <div class="panel">
+      <Button.Group>
+        <Button type="primary" icon="el-icon-arrow-left">Previous Page</Button>
+        <Button type="primary"
+          >Next Page<i class="el-icon-arrow-right el-icon-right" /></Button
+        >
+      </Button.Group>
+      <Button.Group>
+        <Button type="primary" icon="el-icon-edit" />
+        <Button type="primary" icon="el-icon-share" />
+        <Button type="primary" icon="el-icon-delete" />
+      </Button.Group>
     </div>
   </section>
 

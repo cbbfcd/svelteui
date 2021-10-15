@@ -1,15 +1,5 @@
 import { SvelteComponentTyped } from 'svelte';
-
-declare type ButtonGroupType = | 'primary'
-  | 'success'
-  | 'warning'
-  | 'danger'
-  | 'info'
-  | 'text'
-  | 'default';
-
-
-declare type ButtonGroupSize = "large" | "medium" | "small" | "mini";
+import { ButtonType, ButtonSize } from './button.d';
 
 export interface ButtonGroupProps {
   style?: string;

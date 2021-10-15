@@ -1,6 +1,6 @@
 import { SvelteComponentTyped } from 'svelte';
 
-declare type ButtonType = | 'primary'
+export type ButtonType = | 'primary'
   | 'success'
   | 'warning'
   | 'danger'
@@ -8,9 +8,9 @@ declare type ButtonType = | 'primary'
   | 'text'
   | 'default';
 
-declare type ButtonNativeType = 'button' | 'submit' | 'reset';
+export type ButtonNativeType = 'button' | 'submit' | 'reset';
 
-declare type ButtonSize = "large" | "medium" | "small" | "mini";
+export type ButtonSize = "large" | "medium" | "small" | "mini";
 
 export interface ButtonProps extends svelte.JSX.HTMLAttributes<HTMLElementTagNameMap['button']> {
   loading?: boolean;

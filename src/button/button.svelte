@@ -1,5 +1,5 @@
 <script>
-  import { getContext, onMount } from 'svelte';
+  import { getContext } from 'svelte';
 
   import { clsx } from '../utils/clsx';
   import { SVELTEUI_BTN_GROUP_KEY } from '../utils/constants';
@@ -23,7 +23,7 @@
   // class props hack
   export { clazz as class };
 
-  // bind to the component instance.
+  // https://flaviocopes.com/svelte-export-from-component
   export function getElement() {
     return element;
   }
@@ -46,6 +46,7 @@
   type={nativeType}
   {style}
   on:click
+  {...$$props}
 >
   {#if loading}
     <i class="el-icon-loading" />
