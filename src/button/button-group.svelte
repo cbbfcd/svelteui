@@ -3,11 +3,11 @@
   import { writable } from 'svelte/store';
 
   import { clsx } from '../utils/clsx';
-  import { SVELTEUI_BTN_GROUP_KEY } from '../utils/constants';
+  import { SVELTEUI_BTN_GROUP_KEY, UND } from '../utils/constants';
 
-  export let style = void 0;
-  export let size = void 0;
-  export let type = void 0;
+  export let style = UND;
+  export let size = UND;
+  export let type = UND;
 
   // reactive props
   let reactiveProps = writable({ size, type });

@@ -1,24 +1,35 @@
 <script>
-  import { setContext } from 'svelte';
+  import { setContext, createEventDispatcher } from 'svelte';
 
-  import { SVELTEUI_FORM_KEY } from '../utils/constants';
+  import { SVELTEUI_FORM_KEY, UND } from '../utils/constants';
   import { clsx } from '../utils/clsx';
   import { debug } from '../utils/error';
 
-  export let rules = void 0;
-  export let value = void 0;
+  const dispatch = createEventDispatcher();
+
+  export let rules = UND;
+  export let model = UND;
   export let inline = false;
-  export let labelPosition = void 0;
+  export let labelPosition = 'right';
+  // svelte-ignore unused-export-let
   export let labelWidth = '';
+  // svelte-ignore unused-export-let
   export let labelSuffix = '';
-  export let inlineMessage = void 0;
-  export let statusIcon = void 0;
+  // svelte-ignore unused-export-let
+  export let inlineMessage = UND;
+  // svelte-ignore unused-export-let
+  export let statusIcon = UND;
+  // svelte-ignore unused-export-let
   export let showMessage = true;
-  export let size = void 0;
-  export let disabled = void 0;
+  // svelte-ignore unused-export-let
+  export let size = UND;
+  // svelte-ignore unused-export-let
+  export let disabled = UND;
+  // svelte-ignore unused-export-let
   export let validateOnRuleChange = true;
+  // svelte-ignore unused-export-let
   export let hideRequiredAsterisk = false;
-  export let scrollToError = void 0;
+  export let scrollToError = UND;
 
   let clazz = '';
   let element = null;
@@ -93,7 +104,7 @@
       return;
     }
 
-    let promise = void 0;
+    let promise = UND;
     if (typeof callback !== 'function') {
       promise = new Promise((resolve, reject) => {
         callback = function (valid, invalidFields) {
@@ -151,7 +162,7 @@
   export function scrollToField(prop) {
     fields.forEach((item) => {
       if (item.prop === prop) {
-        item.$el && item.$el.scrollIntoView();
+        item.el && item.el.scrollIntoView();
       }
     });
   }
@@ -192,6 +203,7 @@
     autoLabelWidth,
     registerLabelWidth,
     deregisterLabelWidth,
+    dispatch,
     ...$$props // TODO not reactive
   });
 </script>
@@ -207,5 +219,5 @@
 >
   <slot />
   <!--svelte can not bind value in form element directlly.-->
-  <input bind:value style="display: none;" />
+  <input bind:value={model} style="display: none;" />
 </form>

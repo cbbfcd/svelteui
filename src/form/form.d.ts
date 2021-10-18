@@ -12,7 +12,7 @@ interface FormRulesMap {
 export interface FormProps<T extends any> extends svelte.JSX.HTMLAttributes<HTMLElementTagNameMap['form']> {
   rules?: Record<string, FormRulesMap>
   value?: Record<string, T>
-  labelPosition?: string
+  labelPosition?: 'left' | 'right' | 'top'
   labelWidth?: string | number
   labelSuffix?: string
   inline?: boolean
