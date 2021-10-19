@@ -3,8 +3,9 @@
   import { wrap } from 'svelte-spa-router/wrap';
 
   let components = [
+    { src: './components/home.svelte', path: '/' },
     { label: 'Button', src: './components/button.svelte', path: '/button' },
-    { src: './components/home.svelte', path: '/' }
+    { label: 'Tag', src: './components/tag.svelte', path: '/tag' }
   ];
 
   let routes = components.reduce((curr, next) => {
