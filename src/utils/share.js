@@ -20,6 +20,11 @@ export function isFalse(v) {
   return v === false;
 }
 
+export const isNumeric = (str) => {
+  if (typeof str === 'number') return true;
+  return !isNaN(str) && !isNaN(parseFloat(str));
+};
+
 /**
  * Check if value is primitive.
  */

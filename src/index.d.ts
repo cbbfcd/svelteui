@@ -1,13 +1,15 @@
-import Button from './button/button.d';
-import ButtonGroup from './button/button-group.d';
-import Form from './form/form.d';
-import FormItem from './form/form-item.d';
-import Tag from './tag/tag.d';
+import Button from './button/button';
+import ButtonGroup from './button/button-group';
+import Form from './form/form';
+import FormItem from './form/form-item';
+import Tag from './tag/tag';
+import Badge from './badge/badge';
 
 export {
   Button,
   ButtonGroup,
   Form,
   FormItem,
-  Tag
+  Tag,
+  Badge
 }
