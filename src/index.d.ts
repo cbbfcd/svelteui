@@ -4,6 +4,7 @@ import Form from './form/form';
 import FormItem from './form/form-item';
 import Tag from './tag/tag';
 import Badge from './badge/badge';
+import Icon from './icon/icon';
 
 export {
   Button,
@@ -11,5 +12,6 @@ export {
   Form,
   FormItem,
   Tag,
-  Badge
+  Badge,
+  Icon
 }

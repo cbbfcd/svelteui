@@ -50,3 +50,11 @@ export function getPropByPath(obj, path, strict) {
     v: value
   };
 }
+
+export const wrapObj2StylStr = (object) => {
+  if (!object) return undefined;
+  return Object.entries(object)
+    .map(([k, v]) => (k && v ? `${k}: ${v}` : null))
+    .filter(Boolean)
+    .join(';');
+};
