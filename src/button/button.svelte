@@ -44,6 +44,7 @@
 </script>
 
 <button
+  {...$$props}
   bind:this={element}
   class={clsx({
     'el-button': true,
@@ -60,7 +61,6 @@
   type={nativeType}
   {style}
   on:click={handleClick}
-  {...$$props}
 >
   {#if loading}
     <i class="el-icon-loading" />

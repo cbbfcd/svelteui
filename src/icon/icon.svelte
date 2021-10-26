@@ -32,6 +32,7 @@
 </script>
 
 <i
+  {...$$props}
   on:click
   bind:this={element}
   class={clsx({ 'el-icon': true, [clazz]: !!clazz })}

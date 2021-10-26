@@ -23,10 +23,10 @@
 </script>
 
 <div
+  {...$$props}
   bind:this={element}
   {style}
   class={clsx({ 'el-button-group': true, [clazz]: !!clazz })}
-  {...$$props}
 >
   <slot />
 </div>

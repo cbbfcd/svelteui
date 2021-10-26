@@ -1,4 +1,5 @@
-import 'element-theme-chalk/lib/index.css';
+import '@element-plus/theme-chalk/index.css';
+
 import Play from './play.svelte';
 
 export default new Play({
