@@ -5,6 +5,7 @@ import FormItem from './form/form-item';
 import Tag from './tag/tag';
 import Badge from './badge/badge';
 import Icon from './icon/icon';
+import Alert from './alert/alert.d';
 
 export {
   Button,
@@ -13,5 +14,6 @@ export {
   FormItem,
   Tag,
   Badge,
-  Icon
+  Icon,
+  Alert,
 }

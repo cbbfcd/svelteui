@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 import { render } from '@testing-library/svelte';
-import Icon from '..';
+import Icon from '../icon.svelte';
 
 describe('test Icon', () => {
   test('render', () => {
@@ -12,7 +12,7 @@ describe('test Icon', () => {
         size: 18
       }
     });
-    expect(container.getAttribute('style')).toContain(`--color: #000000`);
-    expect(container.getAttribute('style')).toContain(`--font-size: 18px`);
+    expect(container.innerHTML).toContain(`--color: #000000`);
+    expect(container.innerHTML).toContain(`--font-size: 18px`);
   });
 });

@@ -3,7 +3,7 @@ module.exports = {
     '^.+\\.js$': 'babel-jest',
     '^.+\\.svelte$': ['svelte-jester', { preprocess: true }]
   },
-  transformIgnorePatterns: ['<rootDir>/node_modules/(?!(@popperjs)/)'],
+  transformIgnorePatterns: ['node_modules/(?!(svelteui-icons|lodash-es)/)'],
   moduleFileExtensions: ['js', 'svelte'],
   bail: false,
   verbose: false,
