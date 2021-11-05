@@ -8,7 +8,8 @@
     { label: 'Tag', src: './components/tag.svelte', path: '/tag' },
     { label: 'Badge', src: './components/badge.svelte', path: '/badge' },
     { label: 'Icon', src: './components/icon.svelte', path: '/icon' },
-    { label: 'Alert', src: './components/alert.svelte', path: '/alert' }
+    { label: 'Alert', src: './components/alert.svelte', path: '/alert' },
+    { label: 'BackTop', src: './components/backtop.svelte', path: '/backtop' }
   ];
 
   let routes = components.reduce((curr, next) => {

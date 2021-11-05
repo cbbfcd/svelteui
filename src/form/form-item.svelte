@@ -8,7 +8,7 @@
     UND
   } from '../utils/constants';
   import { clsx } from '../utils/clsx';
-  import { error as throwError } from '../utils/error';
+  import { throwError } from '../utils/error';
   import { addUnit, getPropByPath } from '../utils/util';
   import { noop } from '../utils/share';
 

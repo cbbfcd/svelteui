@@ -5,7 +5,7 @@ class SvelteUIError extends Error {
   }
 }
 
-export function error(scope, message) {
+export function throwError(scope, message) {
   throw new SvelteUIError(`[${scope}] ${message}`);
 }
 

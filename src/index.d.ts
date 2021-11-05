@@ -6,6 +6,7 @@ import Tag from './tag/tag';
 import Badge from './badge/badge';
 import Icon from './icon/icon';
 import Alert from './alert/alert.d';
+import Backtop from './backtop/backtop.d';
 
 export {
   Button,
@@ -16,4 +17,5 @@ export {
   Badge,
   Icon,
   Alert,
+  Backtop,
 }

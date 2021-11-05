@@ -1,7 +1,7 @@
 import { isString, isNumber, get } from 'lodash-es';
 
 import { hasOwn } from './share';
-import { debug, error as throwError } from './error';
+import { debug, throwError } from './error';
 
 const SCOPE = 'svelteui:Util';
 

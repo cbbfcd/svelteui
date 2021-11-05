@@ -4,3 +4,4 @@ export { default as Tag } from './tag';
 export { default as Badge } from './badge';
 export { default as Icon } from './icon';
 export { default as Alert } from './alert';
+export { default as Backtop } from './backtop';
